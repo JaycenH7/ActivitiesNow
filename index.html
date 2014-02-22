@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Test</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0a3/jquery.mobile-1.0a3.min.css"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.5.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/mobile/1.0a3/jquery.mobile-1.0a3.min.js"></script>
+<script type="text/javascript" src=""></script>
+</head>
+<body>
+
+<!-- ***************************************************** -->
+
+<div data-role="page" id="welcome">
+  <!-- HEADER -->
+  <div data-role="header">
+    <h4>Welcome</h4>
+  </div>
+
+  <!-- CONTENT -->
+  <div data-role="content">
+    <h1>WELCOME!<h1>
+    <!-- search bar -->
+    <form style="position:absolute; top:70%;">
+      <a href="#home" data-role="button" data-inline="true">Begin</a>
+    </form>
+  </div>
+
+  <!-- FOOTER -->
+  <div data-role="footer" style="position:absolute; top:100%;">
+    <h4>Welcome</h4>
+  </div>
+</div>
+
+<!-- ***************************************************** -->
+
+
+<div data-role="page" id="home">
+
+  <!-- HEADER -->
+  <div data-role="header">
+
+  </div>
+
+  <!-- CONTENT -->
+  <div data-role="content">
+
+  <!-- LISTVIEW elements -->
+  <input id="filter-activities" data-type="search" placeholder="type to search.."> 
+  <ul class="activities" data-role="listview" data-inset="true" data-filter="false">
+    <!-- ???list will be added by server??? -->
+    <!-- suggested activities to user -->
+    <li><a href="#activity-details">Archery (p:18 d:5)</a></li>
+    <li><a href="#activity-details">Hacking (p:100 d:1)</a></li>
+    <li><a href="#activity-details">Coitus (p:1 d:1000 c:50)</a></li>
+  </ul>
+
+  <!-- range finder -->
+  <form>
+    <label for="slider-s">Range(miles)</label>
+    <input type="range" name="slider-s" id="slider-s" value="10" min="1" max="50" data-highlight="true">
+  </form>
+
+  <br>
+
+  <a href="#page_2" data-role="button" data-inline="true">Search</a>
+  <a href="#page_3" data-role="button" data-inline="true">Create</a>
+
+  </div>
+
+  <!-- FOOTER -->
+  <div data-role="footer">
+  </div>
+
+</div>
+
+<!-- ***************************************************** -->
+
+<div data-role="page" id="page_2">
+
+  <!-- HEADER -->
+  <div data-role="header">
+    <h2>Matched Activities</h2>
+  </div>
+
+  <!-- CONTENT -->
+  <div data-role="content">
+
+  <!-- FORM elements -->
+
+  <!-- text input-->
+  <form>
+    <label for="textinput-s">Status Update</label>
+    <br>
+    <input type="text" name="textinput-s" id="textinput-s" 
+    placeholder="I am feeling like..." value="" data-clear-btn="true">
+  </form>
+
+  <!-- select input -->
+  <form>
+    <label for="select-native-s">Atmosphere</label>
+    <br>
+    <select name="select-native-s" id="select-native-s">
+      <option value="outdoors">Outdoors</option>
+      <option value="indoors">Indoors</option>
+    </select>
+  </form>
+
+  <!-- slider input -->
+  <form>
+    <label for="slider-s">Range(miles)</label>
+    <br>
+    <input type="range" name="slider-s" id="slider-s" value="10" min="1" max="50" data-highlight="true">
+  </form>
+
+  <a href="#home" data-role="button" data-inline="true">page 1</a>
+
+  </div>
+
+  <!-- FOOTER -->
+  <div data-role="footer">
+  </div>
+
+<!-- ***************************************************** -->
+
+<div data-role="page" id="page_3">
+
+  <!-- HEADER -->
+  <div data-role="header">
+    <!-- search bar -->
+    <form>
+      <input id="filter-for-listview" data-type="search" placeholder="Type to search...">
+    </form>
+  </div>
+
+  <!-- CONTENT -->
+  <div data-role="content">
+
+  <!-- FORM elements -->
+
+  <!-- text input-->
+  <form>
+    <label for="textinput-s">Status Update</label>
+    <br>
+    <input type="text" name="textinput-s" id="textinput-s" 
+    placeholder="I am feeling like..." value="" data-clear-btn="true">
+  </form>
+
+  <!-- select input -->
+  <form>
+    <label for="select-native-s">Atmosphere</label>
+    <br>
+    <select name="select-native-s" id="select-native-s">
+      <option value="outdoors">Outdoors</option>
+      <option value="indoors">Indoors</option>
+    </select>
+  </form>
+
+  <!-- slider input -->
+  <form>
+    <label for="slider-s">Range(miles)</label>
+    <br>
+    <input type="range" name="slider-s" id="slider-s" value="10" min="1" max="50" data-highlight="true">
+  </form>
+
+  <a href="#home" data-role="button" data-inline="true">page 1</a>
+
+  </div>
+
+  <!-- FOOTER -->
+  <div data-role="footer">
+  </div>
+
+<!-- ***************************************************** -->
+</div>
+</body>
+</html>
+
+Panels
+Popups
+-Photo Lightbox
+Listview
+-Split buttons
+-Forms
+Filters
+Flipswitch
