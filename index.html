@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Test</title>
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0a3/jquery.mobile-1.0a3.min.css"></script>
-<script type="text/javascript" src="http://code.jquery.com/jquery-1.5.min.js"></script>
-<script type="text/javascript" src="http://code.jquery.com/mobile/1.0a3/jquery.mobile-1.0a3.min.js"></script>
-<script type="text/javascript" src=""></script>
+  <title>Test</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.0/jquery.mobile.min.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.0/jquery.mobile.min.js"></script>
 </head>
 <body> 
 
@@ -18,7 +17,6 @@
     <div data-role="header">
       <h4>Welcome</h4>
     </div>
-
 
     <!-- CONTENT -->
       <div data-role="main" class="ui-content">
@@ -41,7 +39,27 @@ search or listen -->
   <div data-role="page" id="home">
     <div data-role="header">
       <h4>HOME</h4>
+      <a href="#options_panel" class="ui-btn-right" date-role="button" data-icon="gear" class="button-small">
+        Options
+      </a>
+      <a href="#popuptest" data-rel="popup">Open</a>
+      <div data-role="popup" id="popuptest" data-theme="b" data-content-theme="b">
+        <h2>Options</h2>
+        <ul data-role="listview" data-filter="true">
+            <li><a href="index.html">Acura</a></li>
+            <li><a href="index.html">Audi</a></li>
+            <li><a href="index.html">BMW</a></li>
+            <li><a href="index.html">Cadillac</a></li>
+            <li><a href="index.html">Chrysler</a></li>
+            <li><a href="index.html">Dodge</a></li>
+            <li><a href="index.html">Ferrari</a></li>
+            <li><a href="index.html">Ford</a></li>
+            <li><a href="index.html">GMC</a></li>
+            <li><a href="index.html">Honda</a></li>
+        </ul>
+      </div>
     </div>
+
 
     <div data-role="content">
       <!-- <input id="activities-filter" data-type="search" placeholder="type to search..">  -->
@@ -49,9 +67,9 @@ search or listen -->
       data-filter="true" data-input="#activities-filter">
         <!-- ???list will be added by server??? -->
         <!-- suggested activities to user -->
-        <li><a href="#details">Archery (p:18 d:5)</a></li>
-        <li><a href="#details">Hacking (p:100 d:1)</a></li>
-        <li><a href="#details">Coitus (p:1 d:1000 c:50)</a></li>
+        <li><img src="images/newyork.jpg"><a href="#details">Archery (p:18 d:5)</a></li>
+        <li><img src="images/paris.jpg"><a href="#details">Hacking (p:100 d:1)</a></li>
+        <li><img src="images/sydney.jpg"><a href="#details">Coitus (p:1 d:1000 c:50)</a></li>
       </ul>
       <form>
         <label for="slider-s">Range(miles)</label>
@@ -60,7 +78,7 @@ search or listen -->
       <br>
     </div>
 
-    <div data-role="footer">
+    <div data-role="footer" style="position:absolute; top:100%;">
       <!-- options -->
       <div data-role="navbar">
         <ul>
@@ -79,6 +97,9 @@ search or listen -->
 
     <div data-role="header">
       <h4>CREATE</h4>
+      <a href="#" class="ui-btn-right" date-role="button" data-icon="gear">
+        Options
+      </a>
     </div>
 
     <!--Fill in activity, location, picture & misc -->
@@ -107,7 +128,7 @@ search or listen -->
       </div>
     </div>
 
-    <div data-role="footer">
+    <div data-role="footer" style="position:absolute; top:100%;">
       <div data-role="navbar">
         <ul>
           <li><a href="#search" data-role="button" data-inline="true">Search</a></li>
@@ -126,6 +147,9 @@ search or listen -->
 
     <div data-role="header">
       <h2>LISTEN</h2>
+      <a href="#" class="ui-btn-right" date-role="button" data-icon="gear">
+        Options
+      </a>
     </div>
 
     <div data-role="content">
@@ -151,7 +175,7 @@ search or listen -->
       </form>
     </div>
 
-    <div data-role="footer">
+    <div data-role="footer" style="position:absolute; top:100%;">
       <div data-role="navbar">
         <ul>
           <li><a href="#search" data-role="button" data-inline="true">Search</a></li>
@@ -170,6 +194,9 @@ search or listen -->
 
     <div data-role="header">
       <h2>DETAILS</h2>
+      <a href="#" class="ui-btn-right" date-role="button" data-icon="gear">
+        Options
+      </a>
     </div>
 
     <div data-role="content">
@@ -194,7 +221,7 @@ search or listen -->
       </form>
     </div>
 
-    <div data-role="footer">
+    <div data-role="footer" style="position:absolute; top:100%;">
       <div data-role="navbar">
         <ul>
           <li><a href="#search" data-role="button" data-inline="true">Search</a></li>
@@ -213,6 +240,9 @@ search or listen -->
 
     <div data-role="header">
       <h2>SEARCH</h2>
+      <a href="#" class="ui-btn-right" date-role="button" data-icon="gear">
+        Options
+      </a>
     </div>
 
     <div data-role="content">
@@ -237,7 +267,7 @@ search or listen -->
       </form>
     </div>
 
-    <div data-role="footer">
+    <div data-role="footer" style="position:absolute; top:100%;">
       <div data-role="navbar">
         <ul>
           <li><a href="#search" data-role="button" data-inline="true">Search</a></li>
@@ -256,6 +286,9 @@ search or listen -->
 
     <div data-role="header">
       <h4>GRID</h4>
+      <a href="#" class="ui-btn-right" date-role="button" data-icon="gear">
+        Options
+      </a>
     </div>
 
     <div data-role="content">
@@ -276,7 +309,60 @@ search or listen -->
       </div>
     </div>
 
-    <div data-role="footer">
+    <!-- grid with buttons -->
+    <div class="ui-grid-a">
+      <div class="ui-block-a">
+        <input type="submit" value="Submit" data-theme="a">
+      </div>
+      <div class="ui-block-b">
+        <input type="reset" value="Reset" data-theme="b">
+      </div>
+    </div>
+
+    <!-- grid with multiple rows -->
+    <div class="ui-grid-b">
+      <!--Row 1 -->
+      <div class="ui-block-a">
+        <div class="ui-bar ui-bar-a" style="height:60px">
+          Block A
+        </div>
+      </div>
+      <div class="ui-block-b">
+        <div class="ui-bar ui-bar-a" style="height:60px">
+          Block B
+        </div>
+      </div>
+      <div class="ui-block-c">
+        <div class="ui-bar ui-bar-a" style="height:60px">
+          Block C
+        </div>
+      </div>
+      <!-- Row 2 -->
+      <div class="ui-block-a">
+        <div class="ui-bar ui-bar-b" style="height:60px">
+          Block A
+        </div>
+      </div>
+      <div class="ui-block-b">
+        <div class="ui-bar ui-bar-b" style="height:60px">
+          Block B
+        </div>
+      </div>
+      <div class="ui-block-c">
+        <div class="ui-bar ui-bar-b" style="height:60px">
+          Block C
+        </div>
+      </div>
+    </div>
+
+    <!-- Responsive Grids -->
+    <div class="ui-grid-b ui-responsive">
+        <div class="ui-block-a"><input type="button" data-icon="arrow-l" value="Back arrow"></div>
+        <div class="ui-block-b"><input type="button" data-icon="plus" value="Add products"></div>
+        <div class="ui-block-c"><input type="button" data-icon="check" data-iconpos="right" value="Confirm order"></div>
+    </div>
+
+    <div data-role="footer" style="position:absolute; top:100%;">
       <div data-role="navbar">
         <ul>
           <li><a href="#search" data-role="button" data-inline="true">Search</a></li>
