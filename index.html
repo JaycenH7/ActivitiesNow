@@ -20,7 +20,7 @@
         <h3 style="color:white; text-shadow: 2px 2px #000000;">Welcome To </h3>
         <h2 style="color:white; text-shadow: 2px 2px #000000;">ACTIVITIES NOW!</h2>
         <br><br><br><br><br>
-        <a href="#home" data-role="button">Start</a>
+        <a href="#home" data-role="button">Login</a>
       </div>
 
   </div>
@@ -31,10 +31,6 @@ search or listen -->
 
   <div data-role="page" id="home">
     <div data-role="header">
-      <h4>HOME</h4>
-      <a href="#popup_options" class="ui-btn-right" data-rel="popup" date-role="button" data-icon="gear" class="button-small">
-        Options
-      </a>
       <div data-role="popup" id="popup_options" data-theme="b" data-content-theme="b">
         <h4>Options</h4>
         <ul data-role="listview">
@@ -47,19 +43,20 @@ search or listen -->
 
 
     <div data-role="content">
-      <!-- <input id="activities-filter" data-type="search" placeholder="type to search..">  -->
-      <ul class="activities-list" data-role="listview" data-inset="true" 
-      data-filter="true" data-input="#activities-filter">
+      <input id="activities-filter" data-type="search" placeholder="what would you rather be doing?">
+      <ul class="activities-list" data-role="listview" data-inset="true" data-filter="true" data-input="#activities-filter">
         <!-- ???list will be added by server??? -->
         <!-- suggested activities to user -->
         <li><img src="images/newyork.jpg"><a href="#details">Archery (p:18 d:5)</a></li>
         <li><img src="images/paris.jpg"><a href="#details">Hacking (p:100 d:1)</a></li>
         <li><img src="images/sydney.jpg"><a href="#details">Coitus (p:1 d:1000 c:50)</a></li>
       </ul>
+      <!--
       <form>
         <label for="slider-s">Range(miles)</label>
         <input type="range" name="slider-s" id="slider-s" value="10" min="1" max="50" data-highlight="true">
       </form>
+      -->
       <br>
     </div>
 
@@ -67,9 +64,50 @@ search or listen -->
       <!-- options -->
       <div data-role="navbar">
         <ul>
-          <li><a href="#search" data-role="button" data-inline="true">Search</a></li>
-          <li><a href="#listen" data-role="button" data-inline="true">Listen</a></li>
-          <li><a href="#create" data-role="button" data-inline="true">Create</a></li>
+          <li><a href="#create" data-role="button">Send Beacon</a></li>
+          <li><a href="#inbox" data-role="button">Inbox</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+<!-- ***************************************************** -->
+<!-- Invitation screen for confirming mutual activities -->
+
+  <div data-role="page" id="inbox">
+
+    <div data-role="content">
+      <ul class="activities-list" data-role="listview" data-inset="true" data-filter="false" data-input="#activities-filter">
+        <!-- ???list will be added by server??? -->
+        <!-- suggested activities to user -->
+        <li><a href="#popupDialog" data-rel="popup">Archery (p:18 d:5)</a></li>
+        <li><a href="#popupDialog" data-rel="popup">Hacking (p:100 d:1)</a></li>
+        <li><a href="#popupDialog" data-rel="popup">Coitus (p:1 d:1000 c:50)</a></li>
+      </ul>
+      <!--
+      <form>
+        <label for="slider-s">Range(miles)</label>
+        <input type="range" name="slider-s" id="slider-s" value="10" min="1" max="50" data-highlight="true">
+      </form>
+      -->
+      <br>
+    </div>
+
+    <div data-role="popup" id="popupDialog" data-overlay-theme="b" data-theme="b" data-dismissible="false" style="max-width:400px;">
+        <div data-role="header" data-theme="a">
+        </div>
+        <div role="main" class="ui-content">
+            <h3 class="ui-title">Do want to confirm?</h3>
+            <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back">Connect</a>
+            <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back">Skip</a>
+        </div>
+    </div>
+
+    <div data-role="footer">
+      <!-- options -->
+      <div data-role="navbar">
+        <ul>
+          <li><a href="#home" data-role="button">Home</a></li>
         </ul>
       </div>
     </div>
@@ -77,97 +115,62 @@ search or listen -->
 
 <!-- ***************************************************** -->
 <!-- Create page where user can make a new activity -->
-
   <div data-role="page" id="create">
 
     <div data-role="header">
-      <h4>CREATE</h4>
-      <a href="#" class="ui-btn-right" date-role="button" data-icon="gear">
-        Options
-      </a>
     </div>
 
     <!--Fill in activity, location, picture & misc -->
     <div data-role="content">
-      <form>
-        <label for="textinput-s">Activity</label>
-        <input type="text" name="textinput-s" id="textinput-s" 
-        placeholder="I want to do..." value="" data-clear-btn="true">
-      </form>
-      <br>
-      <form>
-        <label for="textinput-s">Location</label>
-        <input type="text" name="textinput-s" id="textinput-s" 
-        placeholder="I will be at..." value="" data-clear-btn="true">
-      </form>
-      <br>
-      <form>
-        <label for="select-native-s">Picture</label>
-        <div data-role="main" class="ui-content">
-          <button class="ui-btn">Upload</button>
-        </div>
-      </form>
-      <br>
-      <div style="text-align:right;">
-        <a href="#" data-role="button">Submit</a>
-      </div>
+      <h4>Beacon Sent<h4>
+      <a href="#home" data-role="button">Return</a>
     </div>
 
     <div data-role="footer">
-      <div data-role="navbar">
-        <ul>
-          <li><a href="#search" data-role="button" data-inline="true">Search</a></li>
-          <li><a href="#listen" data-role="button" data-inline="true">Listen</a></li>
-          <li><a href="#home" data-role="button" data-inline="true">Home</a></li>
-        </ul>
-      </div>
     </div>
 
   </div>
 
 <!-- ***************************************************** -->
-<!-- Listen page for user to listen to activities -->
-
-  <div data-role="page" id="listen">
+<!-- Create page where user can make a new activity -->
+  <div data-role="page" id="found">
 
     <div data-role="header">
-      <h2>LISTEN</h2>
-      <a href="#" class="ui-btn-right" date-role="button" data-icon="gear">
-        Options
-      </a>
     </div>
 
     <div data-role="content">
-      <form>
-        <label for="textinput-s">Activity</label>
-        <br>
-        <input type="text" name="textinput-s" id="textinput-s" 
-        placeholder="I am feeling like..." value="" data-clear-btn="true">
-      </form>
-      <br>
-      <form>
-        <label for="select-native-s">Atmosphere</label>
-        <br>
-        <select name="select-native-s" id="select-native-s">
-          <option value="outdoors">Outdoors</option>
-          <option value="indoors">Indoors</option>
-        </select>
-      </form>
-      <form>
-        <label for="slider-s">Range(miles)</label>
-        <br>
-        <input type="range" name="slider-s" id="slider-s" value="10" min="1" max="50" data-highlight="true">
-      </form>
+      <h4>Beacon Found<h4>
+      <a href="#popupDialog2" data-rel="popup" data-role="button">Confirm</a>
+    </div>
+
+    <div data-role="popup" id="popupDialog2" data-overlay-theme="b" data-theme="b" data-dismissible="false" style="max-width:400px;">
+        <div data-role="header" data-theme="a">
+        </div>
+        <div role="main" class="ui-content">
+            <h3 class="ui-title">Do want to confirm?</h3>
+            <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back">Connect</a>
+            <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back">Skip</a>
+        </div>
     </div>
 
     <div data-role="footer">
-      <div data-role="navbar">
-        <ul>
-          <li><a href="#search" data-role="button" data-inline="true">Search</a></li>
-          <li><a href="#create" data-role="button" data-inline="true">Create</a></li>
-          <li><a href="#home" data-role="button" data-inline="true">Home</a></li>
-        </ul>
-      </div>
+    </div>
+
+  </div>
+
+<!-- ***************************************************** -->
+<!-- Create page where user can make a new activity -->
+  <div data-role="page" id="join">
+
+    <div data-role="header">
+    </div>
+
+    <div data-role="content">
+      <h4>Beacon Connected<h4>
+      <a href="#home" data-role="button">Confirm</a>
+    </div>
+
+    <div data-role="footer">
     </div>
 
   </div>
@@ -258,101 +261,6 @@ search or listen -->
           <li><a href="#search" data-role="button" data-inline="true">Search</a></li>
           <li><a href="#create" data-role="button" data-inline="true">Create</a></li>
           <li><a href="#home" data-role="button" data-inline="true">Home</a></li>
-        </ul>
-      </div>
-    </div>
-
-  </div>
-
-<!-- ***************************************************** -->
-<!-- Grid page for displaying uses for grids -->
-
-  <div data-role="page" id="grid">
-
-    <div data-role="header">
-      <h4>GRID</h4>
-      <a href="#" class="ui-btn-right" date-role="button" data-icon="gear">
-        Options
-      </a>
-    </div>
-
-    <div data-role="content">
-      
-    </div>
-
-    <!-- two column grid -->
-    <div class="ui-grid-a">
-      <div class="ui-block-a">
-        <div class="ui-bar ui-bar-a" style="height:60px">
-          Block A
-        </div>
-      </div>
-      <div class="ui-block-b">
-        <div class="ui-bar ui-bar-a" style="height:60px">
-          Block B
-        </div>
-      </div>
-    </div>
-
-    <!-- grid with buttons -->
-    <div class="ui-grid-a">
-      <div class="ui-block-a">
-        <input type="submit" value="Submit" data-theme="a">
-      </div>
-      <div class="ui-block-b">
-        <input type="reset" value="Reset" data-theme="b">
-      </div>
-    </div>
-
-    <!-- grid with multiple rows -->
-    <div class="ui-grid-b">
-      <!--Row 1 -->
-      <div class="ui-block-a">
-        <div class="ui-bar ui-bar-a" style="height:60px">
-          Block A
-        </div>
-      </div>
-      <div class="ui-block-b">
-        <div class="ui-bar ui-bar-a" style="height:60px">
-          Block B
-        </div>
-      </div>
-      <div class="ui-block-c">
-        <div class="ui-bar ui-bar-a" style="height:60px">
-          Block C
-        </div>
-      </div>
-      <!-- Row 2 -->
-      <div class="ui-block-a">
-        <div class="ui-bar ui-bar-b" style="height:60px">
-          Block A
-        </div>
-      </div>
-      <div class="ui-block-b">
-        <div class="ui-bar ui-bar-b" style="height:60px">
-          Block B
-        </div>
-      </div>
-      <div class="ui-block-c">
-        <div class="ui-bar ui-bar-b" style="height:60px">
-          Block C
-        </div>
-      </div>
-    </div>
-
-    <!-- Responsive Grids -->
-    <div class="ui-grid-b ui-responsive">
-        <div class="ui-block-a"><input type="button" data-icon="arrow-l" value="Back arrow"></div>
-        <div class="ui-block-b"><input type="button" data-icon="plus" value="Add products"></div>
-        <div class="ui-block-c"><input type="button" data-icon="check" data-iconpos="right" value="Confirm order"></div>
-    </div>
-
-    <div data-role="footer">
-      <div data-role="navbar">
-        <ul>
-          <li><a href="#search" data-role="button" data-inline="true">Search</a></li>
-          <li><a href="#home" data-role="button" data-inline="true">Home</a></li>
-          <li><a href="#create" data-role="button" data-inline="true">Create</a></li>
         </ul>
       </div>
     </div>
