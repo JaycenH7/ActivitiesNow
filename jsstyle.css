@@ -2754,7 +2754,7 @@ li.ui-block-e {
 }
 /* fixes gaps caused by subpixel problem */
 .ui-navbar li:last-child .ui-btn {
-	margin-right: -4px;
+	margin-right: 4px;
 }
 .ui-navbar li:last-child .ui-btn:after {
 	margin-right: 4px;
