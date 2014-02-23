@@ -8,180 +8,289 @@
 <script type="text/javascript" src="http://code.jquery.com/mobile/1.0a3/jquery.mobile-1.0a3.min.js"></script>
 <script type="text/javascript" src=""></script>
 </head>
-<body>
+<body> 
 
 <!-- ***************************************************** -->
+<!-- Welcome screen when user first starts application -->
 
-<div data-role="page" id="welcome">
-  <!-- HEADER -->
-  <div data-role="header">
-    <h4>Welcome</h4>
-  </div>
-
-  <!-- CONTENT -->
-  <div data-role="content">
-    <h1>WELCOME!<h1>
-    <!-- search bar -->
-    <form style="position:absolute; top:70%;">
-      <a href="#home" data-role="button" data-inline="true">Begin</a>
-    </form>
-  </div>
-
-  <!-- FOOTER -->
-  <div data-role="footer" style="position:absolute; top:100%;">
-    <h4>Welcome</h4>
-  </div>
-</div>
-
-<!-- ***************************************************** -->
+  <div data-role="page" id="welcome"> 
+    <!-- HEADER -->
+    <div data-role="header">
+      <h4>Welcome</h4>
+    </div>
 
 
-<div data-role="page" id="home">
+    <!-- CONTENT -->
+      <div data-role="main" class="ui-content">
+        <h3>Welcome To </h3>
+        <h2>ACTIVITIES NOW!</h2>
+        <br><br><br><br><br>
+        <a href="#home" data-role="button">Start</a>
+      </div>
 
-  <!-- HEADER -->
-  <div data-role="header">
-
-  </div>
-
-  <!-- CONTENT -->
-  <div data-role="content">
-
-  <!-- LISTVIEW elements -->
-  <input id="filter-activities" data-type="search" placeholder="type to search.."> 
-  <ul class="activities" data-role="listview" data-inset="true" data-filter="false">
-    <!-- ???list will be added by server??? -->
-    <!-- suggested activities to user -->
-    <li><a href="#activity-details">Archery (p:18 d:5)</a></li>
-    <li><a href="#activity-details">Hacking (p:100 d:1)</a></li>
-    <li><a href="#activity-details">Coitus (p:1 d:1000 c:50)</a></li>
-  </ul>
-
-  <!-- range finder -->
-  <form>
-    <label for="slider-s">Range(miles)</label>
-    <input type="range" name="slider-s" id="slider-s" value="10" min="1" max="50" data-highlight="true">
-  </form>
-
-  <br>
-
-  <a href="#page_2" data-role="button" data-inline="true">Search</a>
-  <a href="#page_3" data-role="button" data-inline="true">Create</a>
-
-  </div>
-
-  <!-- FOOTER -->
-  <div data-role="footer">
-  </div>
-
-</div>
-
-<!-- ***************************************************** -->
-
-<div data-role="page" id="page_2">
-
-  <!-- HEADER -->
-  <div data-role="header">
-    <h2>Matched Activities</h2>
-  </div>
-
-  <!-- CONTENT -->
-  <div data-role="content">
-
-  <!-- FORM elements -->
-
-  <!-- text input-->
-  <form>
-    <label for="textinput-s">Status Update</label>
-    <br>
-    <input type="text" name="textinput-s" id="textinput-s" 
-    placeholder="I am feeling like..." value="" data-clear-btn="true">
-  </form>
-
-  <!-- select input -->
-  <form>
-    <label for="select-native-s">Atmosphere</label>
-    <br>
-    <select name="select-native-s" id="select-native-s">
-      <option value="outdoors">Outdoors</option>
-      <option value="indoors">Indoors</option>
-    </select>
-  </form>
-
-  <!-- slider input -->
-  <form>
-    <label for="slider-s">Range(miles)</label>
-    <br>
-    <input type="range" name="slider-s" id="slider-s" value="10" min="1" max="50" data-highlight="true">
-  </form>
-
-  <a href="#home" data-role="button" data-inline="true">page 1</a>
-
-  </div>
-
-  <!-- FOOTER -->
-  <div data-role="footer">
+    <!-- FOOTER -->
+    <div data-role="footer" style="position:absolute; top:100%;">
+      <h4>Welcome</h4>
+    </div>
   </div>
 
 <!-- ***************************************************** -->
+<!-- Home screen with suggested acitivities and options to create,
+search or listen -->
 
-<div data-role="page" id="page_3">
+  <div data-role="page" id="home">
+    <div data-role="header">
+      <h4>HOME</h4>
+    </div>
 
-  <!-- HEADER -->
-  <div data-role="header">
-    <!-- search bar -->
-    <form>
-      <input id="filter-for-listview" data-type="search" placeholder="Type to search...">
-    </form>
-  </div>
+    <div data-role="content">
+      <!-- <input id="activities-filter" data-type="search" placeholder="type to search..">  -->
+      <ul class="activities-list" data-role="listview" data-inset="true" 
+      data-filter="true" data-input="#activities-filter">
+        <!-- ???list will be added by server??? -->
+        <!-- suggested activities to user -->
+        <li><a href="#details">Archery (p:18 d:5)</a></li>
+        <li><a href="#details">Hacking (p:100 d:1)</a></li>
+        <li><a href="#details">Coitus (p:1 d:1000 c:50)</a></li>
+      </ul>
+      <form>
+        <label for="slider-s">Range(miles)</label>
+        <input type="range" name="slider-s" id="slider-s" value="10" min="1" max="50" data-highlight="true">
+      </form>
+      <br>
+    </div>
 
-  <!-- CONTENT -->
-  <div data-role="content">
-
-  <!-- FORM elements -->
-
-  <!-- text input-->
-  <form>
-    <label for="textinput-s">Status Update</label>
-    <br>
-    <input type="text" name="textinput-s" id="textinput-s" 
-    placeholder="I am feeling like..." value="" data-clear-btn="true">
-  </form>
-
-  <!-- select input -->
-  <form>
-    <label for="select-native-s">Atmosphere</label>
-    <br>
-    <select name="select-native-s" id="select-native-s">
-      <option value="outdoors">Outdoors</option>
-      <option value="indoors">Indoors</option>
-    </select>
-  </form>
-
-  <!-- slider input -->
-  <form>
-    <label for="slider-s">Range(miles)</label>
-    <br>
-    <input type="range" name="slider-s" id="slider-s" value="10" min="1" max="50" data-highlight="true">
-  </form>
-
-  <a href="#home" data-role="button" data-inline="true">page 1</a>
-
-  </div>
-
-  <!-- FOOTER -->
-  <div data-role="footer">
+    <div data-role="footer">
+      <!-- options -->
+      <div data-role="navbar">
+        <ul>
+          <li><a href="#search" data-role="button" data-inline="true">Search</a></li>
+          <li><a href="#listen" data-role="button" data-inline="true">Listen</a></li>
+          <li><a href="#create" data-role="button" data-inline="true">Create</a></li>
+        </ul>
+      </div>
+    </div>
   </div>
 
 <!-- ***************************************************** -->
+<!-- Create page where user can make a new activity -->
+
+  <div data-role="page" id="create">
+
+    <div data-role="header">
+      <h4>CREATE</h4>
+    </div>
+
+    <!--Fill in activity, location, picture & misc -->
+    <div data-role="content">
+      <form>
+        <label for="textinput-s">Activity</label>
+        <input type="text" name="textinput-s" id="textinput-s" 
+        placeholder="I want to do..." value="" data-clear-btn="true">
+      </form>
+      <br>
+      <form>
+        <label for="textinput-s">Location</label>
+        <input type="text" name="textinput-s" id="textinput-s" 
+        placeholder="I will be at..." value="" data-clear-btn="true">
+      </form>
+      <br>
+      <form>
+        <label for="select-native-s">Picture</label>
+        <div data-role="main" class="ui-content">
+          <button class="ui-btn">Upload</button>
+        </div>
+      </form>
+      <br>
+      <div style="text-align:right;">
+        <a href="#" data-role="button">Submit</a>
+      </div>
+    </div>
+
+    <div data-role="footer">
+      <div data-role="navbar">
+        <ul>
+          <li><a href="#search" data-role="button" data-inline="true">Search</a></li>
+          <li><a href="#listen" data-role="button" data-inline="true">Listen</a></li>
+          <li><a href="#home" data-role="button" data-inline="true">Home</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+<!-- ***************************************************** -->
+<!-- Listen page for user to listen to activities -->
+
+  <div data-role="page" id="listen">
+
+    <div data-role="header">
+      <h2>LISTEN</h2>
+    </div>
+
+    <div data-role="content">
+      <form>
+        <label for="textinput-s">Activity</label>
+        <br>
+        <input type="text" name="textinput-s" id="textinput-s" 
+        placeholder="I am feeling like..." value="" data-clear-btn="true">
+      </form>
+      <br>
+      <form>
+        <label for="select-native-s">Atmosphere</label>
+        <br>
+        <select name="select-native-s" id="select-native-s">
+          <option value="outdoors">Outdoors</option>
+          <option value="indoors">Indoors</option>
+        </select>
+      </form>
+      <form>
+        <label for="slider-s">Range(miles)</label>
+        <br>
+        <input type="range" name="slider-s" id="slider-s" value="10" min="1" max="50" data-highlight="true">
+      </form>
+    </div>
+
+    <div data-role="footer">
+      <div data-role="navbar">
+        <ul>
+          <li><a href="#search" data-role="button" data-inline="true">Search</a></li>
+          <li><a href="#create" data-role="button" data-inline="true">Create</a></li>
+          <li><a href="#home" data-role="button" data-inline="true">Home</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+<!-- ***************************************************** -->
+<!-- Details page that describes more about the selected activity --> 
+
+  <div data-role="page" id="details">
+
+    <div data-role="header">
+      <h2>DETAILS</h2>
+    </div>
+
+    <div data-role="content">
+      <form>
+        <label for="textinput-s">Status Update</label>
+        <br>
+        <input type="text" name="textinput-s" id="textinput-s" 
+        placeholder="I am feeling like..." value="" data-clear-btn="true">
+      </form>
+      <form>
+        <label for="select-native-s">Atmosphere</label>
+        <br>
+        <select name="select-native-s" id="select-native-s">
+          <option value="outdoors">Outdoors</option>
+          <option value="indoors">Indoors</option>
+        </select>
+      </form>
+      <form>
+        <label for="slider-s">Range(miles)</label>
+        <br>
+        <input type="range" name="slider-s" id="slider-s" value="10" min="1" max="50" data-highlight="true">
+      </form>
+    </div>
+
+    <div data-role="footer">
+      <div data-role="navbar">
+        <ul>
+          <li><a href="#search" data-role="button" data-inline="true">Search</a></li>
+          <li><a href="#create" data-role="button" data-inline="true">Create</a></li>
+          <li><a href="#home" data-role="button" data-inline="true">Home</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+<!-- ***************************************************** -->
+<!-- Search page to show user matched activities -->
+
+  <div data-role="page" id="search">
+
+    <div data-role="header">
+      <h2>SEARCH</h2>
+    </div>
+
+    <div data-role="content">
+      <form>
+        <label for="textinput-s">Status Update</label>
+        <br>
+        <input type="text" name="textinput-s" id="textinput-s" 
+        placeholder="I am feeling like..." value="" data-clear-btn="true">
+      </form>
+      <form>
+        <label for="select-native-s">Atmosphere</label>
+        <br>
+        <select name="select-native-s" id="select-native-s">
+          <option value="outdoors">Outdoors</option>
+          <option value="indoors">Indoors</option>
+        </select>
+      </form>
+      <form>
+        <label for="slider-s">Range(miles)</label>
+        <br>
+        <input type="range" name="slider-s" id="slider-s" value="10" min="1" max="50" data-highlight="true">
+      </form>
+    </div>
+
+    <div data-role="footer">
+      <div data-role="navbar">
+        <ul>
+          <li><a href="#search" data-role="button" data-inline="true">Search</a></li>
+          <li><a href="#create" data-role="button" data-inline="true">Create</a></li>
+          <li><a href="#home" data-role="button" data-inline="true">Home</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+<!-- ***************************************************** -->
+<!-- Grid page for displaying uses for grids -->
+
+  <div data-role="page" id="grid">
+
+    <div data-role="header">
+      <h4>GRID</h4>
+    </div>
+
+    <div data-role="content">
+      
+    </div>
+
+    <!-- two column grid -->
+    <div class="ui-grid-a">
+      <div class="ui-block-a">
+        <div class="ui-bar ui-bar-a" style="height:60px">
+          Block A
+        </div>
+      </div>
+      <div class="ui-block-b">
+        <div class="ui-bar ui-bar-a" style="height:60px">
+          Block B
+        </div>
+      </div>
+    </div>
+
+    <div data-role="footer">
+      <div data-role="navbar">
+        <ul>
+          <li><a href="#search" data-role="button" data-inline="true">Search</a></li>
+          <li><a href="#home" data-role="button" data-inline="true">Home</a></li>
+          <li><a href="#create" data-role="button" data-inline="true">Create</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+<!-- ***************************************************** -->
+<!-- -->
+
 </div>
 </body>
 </html>
-
-Panels
-Popups
--Photo Lightbox
-Listview
--Split buttons
--Forms
-Filters
-Flipswitch
