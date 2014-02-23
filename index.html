@@ -3,33 +3,26 @@
 <head>
   <title>Test</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
-<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.0/jquery.mobile.min.css">
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.0/jquery.mobile.min.js"></script>
+  <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.0/jquery.mobile.min.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.0/jquery.mobile.min.js"></script>
 </head>
 <body> 
 
 <!-- ***************************************************** -->
 <!-- Welcome screen when user first starts application -->
 
-  <div data-role="page" id="welcome"> 
-    <!-- HEADER -->
-    <div data-role="header">
-      <h4>Welcome</h4>
-    </div>
+<div data-role="page" id="welcome"
+  style="background:url(images/flash-mob.jpg); background-repeat:no-repeat;"> 
 
     <!-- CONTENT -->
       <div data-role="main" class="ui-content">
-        <h3>Welcome To </h3>
-        <h2>ACTIVITIES NOW!</h2>
+        <h3 style="color:white; text-shadow: 2px 2px #000000;">Welcome To </h3>
+        <h2 style="color:white; text-shadow: 2px 2px #000000;">ACTIVITIES NOW!</h2>
         <br><br><br><br><br>
         <a href="#home" data-role="button">Start</a>
       </div>
 
-    <!-- FOOTER -->
-    <div data-role="footer" style="position:absolute; top:100%;">
-      <h4>Welcome</h4>
-    </div>
   </div>
 
 <!-- ***************************************************** -->
@@ -39,23 +32,15 @@ search or listen -->
   <div data-role="page" id="home">
     <div data-role="header">
       <h4>HOME</h4>
-      <a href="#options_panel" class="ui-btn-right" date-role="button" data-icon="gear" class="button-small">
+      <a href="#popup_options" class="ui-btn-right" data-rel="popup" date-role="button" data-icon="gear" class="button-small">
         Options
       </a>
-      <a href="#popuptest" data-rel="popup">Open</a>
-      <div data-role="popup" id="popuptest" data-theme="b" data-content-theme="b">
-        <h2>Options</h2>
-        <ul data-role="listview" data-filter="true">
+      <div data-role="popup" id="popup_options" data-theme="b" data-content-theme="b">
+        <h4>Options</h4>
+        <ul data-role="listview">
             <li><a href="index.html">Acura</a></li>
             <li><a href="index.html">Audi</a></li>
             <li><a href="index.html">BMW</a></li>
-            <li><a href="index.html">Cadillac</a></li>
-            <li><a href="index.html">Chrysler</a></li>
-            <li><a href="index.html">Dodge</a></li>
-            <li><a href="index.html">Ferrari</a></li>
-            <li><a href="index.html">Ford</a></li>
-            <li><a href="index.html">GMC</a></li>
-            <li><a href="index.html">Honda</a></li>
         </ul>
       </div>
     </div>
@@ -78,7 +63,7 @@ search or listen -->
       <br>
     </div>
 
-    <div data-role="footer" style="position:absolute; top:100%;">
+    <div data-role="footer">
       <!-- options -->
       <div data-role="navbar">
         <ul>
@@ -128,7 +113,7 @@ search or listen -->
       </div>
     </div>
 
-    <div data-role="footer" style="position:absolute; top:100%;">
+    <div data-role="footer">
       <div data-role="navbar">
         <ul>
           <li><a href="#search" data-role="button" data-inline="true">Search</a></li>
@@ -175,7 +160,7 @@ search or listen -->
       </form>
     </div>
 
-    <div data-role="footer" style="position:absolute; top:100%;">
+    <div data-role="footer">
       <div data-role="navbar">
         <ul>
           <li><a href="#search" data-role="button" data-inline="true">Search</a></li>
@@ -221,7 +206,7 @@ search or listen -->
       </form>
     </div>
 
-    <div data-role="footer" style="position:absolute; top:100%;">
+    <div data-role="footer">
       <div data-role="navbar">
         <ul>
           <li><a href="#search" data-role="button" data-inline="true">Search</a></li>
@@ -267,7 +252,7 @@ search or listen -->
       </form>
     </div>
 
-    <div data-role="footer" style="position:absolute; top:100%;">
+    <div data-role="footer">
       <div data-role="navbar">
         <ul>
           <li><a href="#search" data-role="button" data-inline="true">Search</a></li>
@@ -362,7 +347,7 @@ search or listen -->
         <div class="ui-block-c"><input type="button" data-icon="check" data-iconpos="right" value="Confirm order"></div>
     </div>
 
-    <div data-role="footer" style="position:absolute; top:100%;">
+    <div data-role="footer">
       <div data-role="navbar">
         <ul>
           <li><a href="#search" data-role="button" data-inline="true">Search</a></li>
